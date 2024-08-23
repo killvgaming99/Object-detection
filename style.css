@@ -1,29 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-body {
-    font-family: 'Poppins', sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    overflow-x: hidden;
 }
 
 header {
-    background: #333;
-    color: white;
-    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
+    background: #333;
+    color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background 0.3s;
 }
 
 header nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
 }
 
@@ -71,20 +72,17 @@ header nav ul li a:hover {
     align-items: center;
     padding: 50px;
     position: relative;
-    overflow: hidden;
 }
 
 .hero-content {
     flex: 1;
     text-align: left;
-    animation: fadeIn 1s ease-in-out;
 }
 
 .hero-content h1 {
     font-size: 3em;
     font-weight: 700;
     margin-bottom: 20px;
-    transform: translateZ(50px);
 }
 
 .hero-content p {
@@ -102,8 +100,6 @@ header nav ul li a:hover {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transform: translateY(20px);
-    animation: slideIn 1s ease-in-out forwards;
 }
 
 .about {
@@ -115,7 +111,6 @@ header nav ul li a:hover {
 .about-content {
     flex: 1;
     text-align: left;
-    animation: fadeIn 1s ease-in-out;
 }
 
 .about-image {
@@ -225,22 +220,27 @@ footer {
     color: white;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    to {
-        opacity: 1;
-    }
-}
 
-@keyframes slideIn {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
+    .hero {
+        flex-direction: column;
+        padding: 20px;
     }
-    to {
-        transform: translateY(0);
-        opacity: 1;
+
+    .hero-image {
+        display: none;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image {
+        display: none;
     }
 }
