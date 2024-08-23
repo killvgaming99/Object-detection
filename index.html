@@ -8,52 +8,45 @@
 </head>
 <body>
     <header>
-        <h1>SRK Enterprises</h1>
-        <p>Your trusted business partner</p>
+        <h1>Welcome to SRK Enterprises</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <section class="hero">
-        <div class="card" id="water-card">
-            <h2>Innovating Future</h2>
-            <p>Touch the flow, feel the difference.</p>
-        </div>
-    </section>
-
-    <section class="products">
-        <h2>Our Products</h2>
-        <div class="product-container">
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300" alt="Product 1">
-                <h3>Product 1</h3>
-                <p class="price">$99.99</p>
-                <div class="links">
-                    <a href="https://www.amazon.com/" target="_blank">Buy on Amazon</a>
-                    <a href="https://www.ebay.com/" target="_blank">Buy on eBay</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300" alt="Product 2">
-                <h3>Product 2</h3>
-                <p class="price">$79.99</p>
-                <div class="links">
-                    <a href="https://www.amazon.com/" target="_blank">Buy on Amazon</a>
-                    <a href="https://www.ebay.com/" target="_blank">Buy on eBay</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300" alt="Product 3">
-                <h3>Product 3</h3>
-                <p class="price">$59.99</p>
-                <div class="links">
-                    <a href="https://www.amazon.com/" target="_blank">Buy on Amazon</a>
-                    <a href="https://www.ebay.com/" target="_blank">Buy on eBay</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to SRK Enterprises, your trusted partner in business solutions.</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>SRK Enterprises is dedicated to providing top-notch services to our clients.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We offer a wide range of services to meet your business needs.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 SRK Enterprises. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
