@@ -15,6 +15,8 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -27,7 +29,7 @@
 
     <section id="about">
         <h2>About Us</h2>
-        <p>SRK Enterprises is a leading company in providing top-notch services.</p>
+        <p>SRK Enterprises is a leading company in providing top-notch services and products.</p>
         <img src="https://source.unsplash.com/random/400x300" alt="About Us">
     </section>
 
@@ -57,9 +59,45 @@
         </div>
     </section>
 
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://source.unsplash.com/random/200x200?product1" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>$100</p>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/random/200x200?product2" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>$150</p>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/random/200x200?product3" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/random/200x200?product4" alt="Product 4">
+                <h3>Product 4</h3>
+                <p>$250</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
     <footer>
         <p>© 2024 SRK Enterprises. All rights reserved.</p>
-        <p class="scroll-to-top" onclick="scrollToTop()">↑ Scroll to Top</p>
+        <p class="scroll-to-top" onclick="scrollToTop()">↑ View Home, About, Services, Products, Contact</p>
     </footer>
 
     <script src="script.js"></script>
