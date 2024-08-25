@@ -189,6 +189,18 @@ footer {
     color: #fff;
 }
 
+.scroll-to-top {
+    cursor: pointer;
+    color: #f39c12;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.scroll-to-top:hover {
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
