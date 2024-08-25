@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
 header {
@@ -10,8 +11,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #4CAF50;
+    background: linear-gradient(45deg, #6ab04c, #f39c12);
     color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s;
 }
 
 header .logo {
@@ -28,18 +33,26 @@ header nav ul {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
 }
 
 #hero {
     text-align: center;
     padding: 100px 20px;
-    background: url('https://source.unsplash.com/random/1600x900') no-repeat center center/cover;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1600x900') no-repeat center center/cover;
     color: #fff;
+    position: relative;
+    overflow: hidden;
 }
 
 #hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
 #hero p {
@@ -55,6 +68,12 @@ header nav ul li a {
     color: #fff;
     border: none;
     border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#hero button:hover {
+    transform: scale(1.05);
+    background-color: #45a049;
 }
 
 section {
@@ -65,6 +84,7 @@ section {
 section h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #333;
 }
 
 section p {
@@ -85,10 +105,10 @@ section img {
 }
 
 .service {
-    background-color: #f1f1f1;
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -108,10 +128,10 @@ section img {
 }
 
 .product {
-    background-color: #f1f1f1;
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -139,6 +159,12 @@ section img {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #4CAF50;
 }
 
 #contact form button {
@@ -149,6 +175,11 @@ section img {
     color: #fff;
     border: none;
     border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#contact form button:hover {
+    background-color: #45a049;
 }
 
 footer {
