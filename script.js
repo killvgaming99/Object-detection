@@ -1,32 +1,38 @@
-function scrollToSection(sectionId) {
-    var section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: 'smooth' });
-}
+document.querySelector('header').addEventListener('mouseover', () => {
+    document.querySelector('header').style.transform = 'translateY(-5px)';
+    document.querySelector('header').style.background = 'linear-gradient(45deg, #333, #666)';
+});
 
-document.querySelectorAll('.smooth-scroll').forEach(function(link) {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
-        var targetId = event.target.getAttribute('href');
-        var targetSection = document.querySelector(targetId);
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+document.querySelector('header').addEventListener('mouseout', () => {
+    document.querySelector('header').style.transform = 'translateY(0px)';
+    document.querySelector('header').style.background = 'linear-gradient(45deg, #1f1f1f, #3c3c3c)';
+});
+
+document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        window.scrollTo({
+            top: target.offsetTop,
+            behavior: 'smooth'
+        });
     });
 });
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    var name = document.getElementsByName('name')[0].value;
-    var email = document.getElementsByName('email')[0].value;
-    var message = document.getElementsByName('message')[0].value;
-    
-    var emailBody = 'Name: ' + name + '\n';
-    emailBody += 'Email: ' + email + '\n';
-    emailBody += 'Message: ' + message + '\n';
-    
-    var mailtoLink = 'mailto:sk9482379@gmail.com,killvgaming999@gmail.com?subject=New Message from SRK Enterprises&body=' + encodeURIComponent(emailBody);
-    window.location.href = mailtoLink;
-    
-    alert('Thank you for your message! We will get back to you soon.');
-    
-    document.getElementById('contact-form').reset();
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth'
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const aboutExpanded = document.querySelector('.about-expanded');
+    const aboutBtn = document.querySelector('.hero-content button');
+
+    aboutBtn.addEventListener('click', () => {
+        aboutExpanded.style.display = 'block';
+        aboutBtn.style.display = 'none';
+    });
 });
