@@ -2,6 +2,10 @@ function scrollToAbout() {
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
 }
 
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
     
