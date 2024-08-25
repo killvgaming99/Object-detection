@@ -12,46 +12,50 @@
         <div class="logo">SRK Enterprises</div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="smooth-scroll">Home</a></li>
+                <li><a href="#about" class="smooth-scroll">About</a></li>
+                <li><a href="#services" class="smooth-scroll">Services</a></li>
+                <li><a href="#products" class="smooth-scroll">Products</a></li>
+                <li><a href="#contact" class="smooth-scroll">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="hero">
-        <h1>Welcome to SRK Enterprises</h1>
-        <p>Your trusted partner in excellence</p>
-        <button onclick="scrollToAbout()">Get Started</button>
+    <section id="home">
+        <div class="hero-content">
+            <h1 class="animate__animated animate__fadeInDown">Welcome to SRK Enterprises</h1>
+            <p class="animate__animated animate__fadeInUp">Your trusted partner in excellence</p>
+            <button onclick="scrollToSection('about')" class="animate__animated animate__bounceIn">Get Started</button>
+        </div>
     </section>
 
     <section id="about">
-        <h2>About Us</h2>
-        <p>SRK Enterprises is a leading company in providing top-notch services and products.</p>
-        <img src="https://source.unsplash.com/random/400x300" alt="About Us">
+        <div class="about-content">
+            <h2 class="animate__animated animate__fadeInLeft">About Us</h2>
+            <p class="animate__animated animate__fadeInRight">SRK Enterprises is a leading company in providing top-notch services and products.</p>
+            <img src="https://source.unsplash.com/random/400x300" alt="About Us" class="animate__animated animate__zoomIn">
+        </div>
     </section>
 
     <section id="services">
-        <h2>Our Services</h2>
+        <h2 class="animate__animated animate__fadeInDown">Our Services</h2>
         <div class="service-grid">
-            <div class="service">
+            <div class="service animate__animated animate__fadeInUp">
                 <i class="icon">🔧</i>
                 <h3>Service One</h3>
                 <p>Description of service one.</p>
             </div>
-            <div class="service">
+            <div class="service animate__animated animate__fadeInUp">
                 <i class="icon">💼</i>
                 <h3>Service Two</h3>
                 <p>Description of service two.</p>
             </div>
-            <div class="service">
+            <div class="service animate__animated animate__fadeInUp">
                 <i class="icon">🚀</i>
                 <h3>Service Three</h3>
                 <p>Description of service three.</p>
             </div>
-            <div class="service">
+            <div class="service animate__animated animate__fadeInUp">
                 <i class="icon">📊</i>
                 <h3>Service Four</h3>
                 <p>Description of service four.</p>
@@ -60,24 +64,24 @@
     </section>
 
     <section id="products">
-        <h2>Our Products</h2>
+        <h2 class="animate__animated animate__fadeInDown">Our Products</h2>
         <div class="product-grid">
-            <div class="product">
+            <div class="product animate__animated animate__flipInX">
                 <img src="https://source.unsplash.com/random/200x200?product1" alt="Product 1">
                 <h3>Product 1</h3>
                 <p>$100</p>
             </div>
-            <div class="product">
+            <div class="product animate__animated animate__flipInX">
                 <img src="https://source.unsplash.com/random/200x200?product2" alt="Product 2">
                 <h3>Product 2</h3>
                 <p>$150</p>
             </div>
-            <div class="product">
+            <div class="product animate__animated animate__flipInX">
                 <img src="https://source.unsplash.com/random/200x200?product3" alt="Product 3">
                 <h3>Product 3</h3>
                 <p>$200</p>
             </div>
-            <div class="product">
+            <div class="product animate__animated animate__flipInX">
                 <img src="https://source.unsplash.com/random/200x200?product4" alt="Product 4">
                 <h3>Product 4</h3>
                 <p>$250</p>
@@ -86,8 +90,8 @@
     </section>
 
     <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
+        <h2 class="animate__animated animate__fadeInDown">Contact Us</h2>
+        <form id="contact-form" class="animate__animated animate__fadeInUp">
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <textarea name="message" placeholder="Message" required></textarea>
@@ -97,7 +101,6 @@
 
     <footer>
         <p>© 2024 SRK Enterprises. All rights reserved.</p>
-        <p class="scroll-to-top" onclick="scrollToTop()">↑ View Home, About, Services, Products, Contact</p>
     </footer>
 
     <script src="script.js"></script>
