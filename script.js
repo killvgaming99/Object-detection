@@ -35,4 +35,23 @@ document.addEventListener('DOMContentLoaded', () => {
         aboutExpanded.style.display = 'block';
         aboutBtn.style.display = 'none';
     });
+
+    // Handling form submission
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = form.elements['name'].value;
+        const phone = form.elements['phone'].value;
+        const message = form.elements['message'].value;
+
+        const mailtoLink = `mailto:sk9482379@gmail.com,killvgaming999@gmail.com?subject=New%20Contact%20Form%20Submission&body=Name: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AMessage: ${encodeURIComponent(message)}`;
+
+        // Open the email client
+        window.location.href = mailtoLink;
+
+        // Optional: Display a message or reset the form
+        alert('Thank you for your message! We will get back to you shortly.');
+        form.reset();
+    });
 });
