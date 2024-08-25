@@ -1,10 +1,16 @@
-function scrollToAbout() {
-    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
 }
 
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+document.querySelectorAll('.smooth-scroll').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        var targetId = event.target.getAttribute('href');
+        var targetSection = document.querySelector(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
