@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
 }
 
 header {
@@ -89,7 +89,7 @@ section {
 section h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #fff;
+    color: #fff; /* White text for headings */
 }
 
 section p {
@@ -116,7 +116,7 @@ section img {
 }
 
 .service {
-    background-color: #1f1f1f;
+    background-color: #1f1f1f; /* Dark background for services */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -130,6 +130,7 @@ section img {
 .service .icon {
     font-size: 48px;
     margin-bottom: 10px;
+    color: #f39c12; /* Accent color for icons */
 }
 
 .product-grid {
@@ -139,7 +140,7 @@ section img {
 }
 
 .product {
-    background-color: #1f1f1f;
+    background-color: #1f1f1f; /* Dark background for products */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -196,7 +197,7 @@ section img {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1f1f1f;
+    background-color: #1f1f1f; /* Dark footer */
     color: #fff;
 }
 
