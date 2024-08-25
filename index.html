@@ -19,10 +19,6 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="Search...">
-            <button onclick="searchFunction()">Search</button>
-        </div>
     </header>
 
     <section id="hero">
@@ -39,15 +35,27 @@
 
     <section id="services">
         <h2>Our Services</h2>
-        <div class="service">
-            <i class="icon">🔧</i>
-            <h3>Service One</h3>
-            <p>Description of service one.</p>
-        </div>
-        <div class="service">
-            <i class="icon">💼</i>
-            <h3>Service Two</h3>
-            <p>Description of service two.</p>
+        <div class="service-grid">
+            <div class="service">
+                <i class="icon">🔧</i>
+                <h3>Service One</h3>
+                <p>Description of service one.</p>
+            </div>
+            <div class="service">
+                <i class="icon">💼</i>
+                <h3>Service Two</h3>
+                <p>Description of service two.</p>
+            </div>
+            <div class="service">
+                <i class="icon">🚀</i>
+                <h3>Service Three</h3>
+                <p>Description of service three.</p>
+            </div>
+            <div class="service">
+                <i class="icon">📊</i>
+                <h3>Service Four</h3>
+                <p>Description of service four.</p>
+            </div>
         </div>
     </section>
 
@@ -79,7 +87,7 @@
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <form>
+        <form id="contact-form">
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <textarea name="message" placeholder="Message" required></textarea>
