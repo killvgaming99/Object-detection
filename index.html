@@ -1,156 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SRK Enterprises</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Contact List</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-
 <body>
-    <header>
-        <div class="logo">SRK Enterprises</div>
-        <nav>
-            <ul>
-                <li><a href="#services" class="smooth-scroll">Services</a></li>
-                <li><a href="#products" class="smooth-scroll">Products</a></li>
-                <li><a href="#contact" class="smooth-scroll">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home">
-        <div class="hero-content">
-            <h1 class="animate__animated animate__fadeInDown">Welcome to SRK Enterprises</h1>
-            <p class="animate__animated animate__fadeInUp">Your trusted partner in excellence</p>
-            <button onclick="scrollToSection('about')" class="animate__animated animate__bounceIn">Get Started</button>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="about-content">
-            <h2 class="animate__animated animate__fadeInLeft">About Us</h2>
-            <p class="animate__animated animate__fadeInRight">SRK Enterprises is a leading company in providing top-notch services and products.</p>
-            <img src="https://source.unsplash.com/random/400x300" alt="About Us" class="animate__animated animate__zoomIn">
-            <div class="about-expanded">
-                <h3>Our Services</h3>
-                <div class="service-grid">
-                    <div class="service animate__animated animate__fadeInUp">
-                        <i class="fas fa-tools"></i>
-                        <h4>Service One</h4>
-                        <p>Description of service one.</p>
-                    </div>
-                    <div class="service animate__animated animate__fadeInUp">
-                        <i class="fas fa-briefcase"></i>
-                        <h4>Service Two</h4>
-                        <p>Description of service two.</p>
-                    </div>
-                    <div class="service animate__animated animate__fadeInUp">
-                        <i class="fas fa-rocket"></i>
-                        <h4>Service Three</h4>
-                        <p>Description of service three.</p>
-                    </div>
-                    <div class="service animate__animated animate__fadeInUp">
-                        <i class="fas fa-chart-line"></i>
-                        <h4>Service Four</h4>
-                        <p>Description of service four.</p>
-                    </div>
-                </div>
-                <h3>Our Products</h3>
-                <div class="product-grid">
-                    <div class="product animate__animated animate__flipInX">
-                        <img src="https://source.unsplash.com/random/200x200?product1" alt="Product 1">
-                        <h4>Product 1</h4>
-                        <p>$100</p>
-                    </div>
-                    <div class="product animate__animated animate__flipInX">
-                        <img src="https://source.unsplash.com/random/200x200?product2" alt="Product 2">
-                        <h4>Product 2</h4>
-                        <p>$150</p>
-                    </div>
-                    <div class="product animate__animated animate__flipInX">
-                        <img src="https://source.unsplash.com/random/200x200?product3" alt="Product 3">
-                        <h4>Product 3</h4>
-                        <p>$200</p>
-                    </div>
-                    <div class="product animate__animated animate__flipInX">
-                        <img src="https://source.unsplash.com/random/200x200?product4" alt="Product 4">
-                        <h4>Product 4</h4>
-                        <p>$250</p>
-                    </div>
-                </div>
-                <h3>Contact Us</h3>
-                <form id="contact-form" class="animate__animated animate__fadeInUp" onsubmit="sendEmail(event)">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
-                    <textarea name="message" placeholder="Message" required></textarea>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2024 SRK Enterprises. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function sendEmail(event) {
-            event.preventDefault();
-
-            const form = document.getElementById('contact-form');
-            const name = form.name.value;
-            const phone = form.phone.value;
-            const message = form.message.value;
-
-            const mailtoLink = `mailto:sk9482379@gmail.com,killvgaming999@gmail.com?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0APhone:%20${encodeURIComponent(phone)}%0AMessage:%20${encodeURIComponent(message)}`;
-
-            window.location.href = mailtoLink;
-        }
-
-        document.querySelector('header').addEventListener('mouseover', () => {
-            document.querySelector('header').style.transform = 'translateY(-5px)';
-            document.querySelector('header').style.background = 'linear-gradient(45deg, #333, #666)';
-        });
-
-        document.querySelector('header').addEventListener('mouseout', () => {
-            document.querySelector('header').style.transform = 'translateY(0px)';
-            document.querySelector('header').style.background = 'linear-gradient(45deg, #1f1f1f, #3c3c3c)';
-        });
-
-        document.querySelectorAll('.smooth-scroll').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                window.scrollTo({
-                    top: target.offsetTop,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            window.scrollTo({
-                top: section.offsetTop,
-                behavior: 'smooth'
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const aboutExpanded = document.querySelector('.about-expanded');
-            const aboutBtn = document.querySelector('.hero-content button');
-
-            aboutBtn.addEventListener('click', () => {
-                aboutExpanded.style.display = 'block';
-                aboutBtn.style.display = 'none';
-            });
-        });
-    </script>
+    <div id="contactListContainer">
+        <h2>User Contacts</h2>
+        <ul id="contactList"></ul>
+    </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
